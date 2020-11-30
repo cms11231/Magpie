@@ -58,7 +58,7 @@ public class Magpie2 {
 	 * @return a non-committal string
 	 */
 	private String getRandomResponse() {
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 7;
 		double r = Math.random();
 		int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -71,6 +71,12 @@ public class Magpie2 {
 			response = "Do you really think so?";
 		} else if (whichResponse == 3) {
 			response = "You don't say.";
+		} else if (whichResponse == 4) {
+			response = "No wayyyyyy";
+		} else if (whichResponse == 5) {
+			response = "Is that sarcastic?";
+		} else if (whichResponse == 6) {
+			response = "poo :) heheehehehe";
 		}
 
 		return response;
