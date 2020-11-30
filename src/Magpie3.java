@@ -27,15 +27,29 @@ public class Magpie3 {
 	 */
 	public String getResponse(String statement) {
 		String response = "";
-		if (statement.length() == 0) {
+		if (statement.trim().length() == 0){
 			response = "Say something, please.";
-		} else if (findKeyword(statement, "no") >= 0) {
+		} else if (statement.indexOf("no") >= 0) {
 			response = "Why so negative?";
-		} else if (findKeyword(statement, "mother") >= 0
-				|| findKeyword(statement, "father") >= 0
-				|| findKeyword(statement, "sister") >= 0
-				|| findKeyword(statement, "brother") >= 0) {
+		} else if (statement.indexOf("mother") >= 0
+				|| statement.indexOf("father") >= 0
+				|| statement.indexOf("sister") >= 0
+				|| statement.indexOf("brother") >= 0) {
 			response = "Tell me more about your family.";
+		} else if (statement.indexOf("cat") >= 0 || statement.indexOf("dog") >= 0) {
+			response = "Tell me more about your pets.";
+		} else if (statement.indexOf("Mr.") >= 0) {
+			response = "He sounds like a great teacher!";
+		} else if (statement.indexOf("Mrs.") >= 0) {
+			response = "She sounds like a great teacher!";
+		} else if (statement.trim().length() <=0) {
+			response = "Say something please :)";
+		} else if (statement.indexOf("Yes") >= 0) {
+			response = "good.";
+		} else if (statement.indexOf("Depressed") >= 0) {
+			response = "I am depressed :,)";
+		} else if (statement.indexOf("666") >= 0) {
+			response = "Uhmmmmmmm OK o.O";
 		} else {
 			response = getRandomResponse();
 		}
