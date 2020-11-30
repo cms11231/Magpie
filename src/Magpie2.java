@@ -38,6 +38,12 @@ public class Magpie2 {
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0) {
 			response = "Tell me more about your family.";
+		} else if (statement.indexOf("cat") >= 0 || statement.indexOf("dog") >= 0) {
+			response = "Tell me more about your pets.";
+		} else if (statement.indexOf("Mr.") >= 0) {
+			response = "He sounds like a great teacher!";
+		} else if (statement.indexOf("Mrs.") >= 0) {
+			response = "She sounds like a great teacher!";
 		} else {
 			response = getRandomResponse();
 		}
@@ -68,3 +74,9 @@ public class Magpie2 {
 		return response;
 	}
 }
+
+
+// My mother and I talked last night - Tell me more about your family
+// I said no! - Why so negative?
+// The weather is nice - Interesting, tell me more.
+// Do you know my brother? - Why so negative?
